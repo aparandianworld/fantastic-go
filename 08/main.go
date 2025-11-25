@@ -29,7 +29,7 @@ func main() {
 	mv, err := mean(values)
 
 	if err != nil {
-		fmt.Println(err)
+		fmt.Printf("error: %v\n", err)
 		return
 	}
 
