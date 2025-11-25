@@ -8,10 +8,15 @@ import (
 func main() {
 	fmt.Println("Median of slice 10, 9, 8, 7, 6, 5, 4, 3, 2 is? ")
 
-	var median int
-	nums := []int{10, 3, 6, 7, 8, 5, 4, 9, 2}
+	var median float64
+	nums := []float64{10, 3, 6, 7, 8, 5, 4, 9, 2}
 
-	sort.Ints(nums)
+	if len(nums) == 0 {
+		fmt.Println("input slice is empty")
+		return
+	}
+
+	sort.Float64s(nums)
 
 	i := len(nums) / 2
 
