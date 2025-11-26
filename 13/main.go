@@ -61,6 +61,7 @@ func main() {
 		return
 	}
 
+	// can call moveLocation on car because location is embedded in car
 	car.moveLocation(20.07, -10.9)
 
 	fmt.Printf("%+v\n", car)
