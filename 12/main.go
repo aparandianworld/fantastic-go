@@ -24,7 +24,7 @@ func NewLocation(lat float64, lon float64) (Location, error) {
 	return loc, nil
 }
 
-func (l Location) moveLocation(lat float64, lon float64) Location {
+func (l *Location) moveLocation(lat float64, lon float64) *Location {
 	l.Latitude += lat
 	l.Longitude += lon
 
@@ -47,5 +47,5 @@ func main() {
 
 	fmt.Printf("%+v\n", location)
 	fmt.Printf("%#v\n", sf)
-	fmt.Printf("%+v\n", ny)
+	fmt.Printf("%+v\n", *ny)
 }
