@@ -4,7 +4,11 @@ import (
 	"fmt"
 )
 
-func add[T int | float64 | string](a, b T) T {
+type Addable interface {
+	int | float64 | string
+}
+
+func add[T Addable](a, b T) T {
 	return a + b
 }
 
