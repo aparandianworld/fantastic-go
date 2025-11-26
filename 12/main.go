@@ -29,8 +29,6 @@ func main() {
 
 	location := Location{Latitude: latitude, Longitude: longitude}
 
-	fmt.Println(location)
-
 	sf, err := NewLocation(37.7749, -122.4194)
 
 	if err != nil {
@@ -38,5 +36,6 @@ func main() {
 		return
 	}
 
-	fmt.Println(sf)
+	fmt.Printf("%+v\n", location)
+	fmt.Printf("%#v\n", sf)
 }
